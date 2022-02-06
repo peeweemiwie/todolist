@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <title>ToDoList</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+    <ul class="container__saved-todos" data-saved-todos>
+    </ul>
+    <form action="" id='form__add-todo' data-form-new-todo>
+      <label for="input__add-todo">Task:</label>
+      <input type="text" class='input__add-todo' autofocus="true" data-input-new-todo>
+    </form>
+  </div>
+  <template id='template__list-item'>
+    <li class="list-item flex" data-completed data-id>
+      <div class='flex'>
+        <label role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="complete">
+        </label>
+        <input type="checkbox" id="complete" class="checkbox-complete" data-checkbox-complete>
+        <p class="text__todo" data-text-todo></p>
+      </div>
+      <button class="btn__delete" data-delete>delete</button>
+    </li>
+  </template>
+</body>
+
+</html>

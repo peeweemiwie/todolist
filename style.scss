@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 500px;
+	width: 80vw;
+}
+
+.flex {
+	align-items: center;
+	display: flex;
+}
+
+.container__saved-todos {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.list-item {
+	border: 1px solid gray;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+	&[data-completed='true'] {
+		opacity: 0.5;
+		.text__todo {
+			text-decoration: line-through;
+		}
+	}
+	.checkbox__complete {
+		height: 1rem;
+		width: 1rem;
+	}
+	.text__todo {
+		margin: 0 0 0 1rem;
+	}
+}
+
+.input__add-todo {
+	display: block;
+	width: 100%;
+}
